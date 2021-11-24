@@ -1,0 +1,253 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.2;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article>*+* {
+    margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+html {
+    --sub-color: #9d2929;
+    overflow: hidden;
+}
+
+.body-app {
+    background-color: #141218;
+    background-size: contain;
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background-position: top right 20%;
+}
+
+.container {
+    width: 95%;
+    max-width: 1140px;
+    margin: auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.logo {
+    max-width: 200px;
+}
+
+.menu-list {
+    display: flex;
+    align-items: center;
+}
+
+.menu-list a {
+    display: block;
+    color: #ffffff;
+    font-size: 18px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-decoration: none;
+}
+
+.menu-list a:hover {
+    color: darkgoldenrod;
+    text-decoration: underline;
+}
+
+.social {
+    display: flex;
+}
+
+.social img {
+    padding: 20px;
+    width: 70px;
+    height: 70px;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+}
+
+.rating-stars {
+    padding: 20px 0;
+    display: flex;
+}
+
+.main-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.star {
+    margin-right: 5px;
+    height: 20px;
+    width: auto;
+}
+
+.main-description {
+    max-width: 400px;
+}
+
+.youtybe-modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #dc354557;
+
+}
+
+.youtybe-modal img {
+    width: 100px;
+
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-container {
+    /* height: 300px; */
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    background: rgb(244, 248, 0);
+}
+
+.swiper-button-next:after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    background-image: url(../img/icons/star-o.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30px;
+}
+
+.swiper-button-prev:after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    transform: rotate(180deg);
+    background-image: url(../img/icons/star-o.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30px;
+}
+
+.series {
+    margin-top: 50px;
+}
+
+.card-description {
+    color: black;
+}
